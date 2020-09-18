@@ -2,6 +2,8 @@
 
 A terminal/cli typing test heavily inspired/based off @briano1905's [typings.gg](https://typings.gg) | [github page](https://github.com/briano1905/typings).
 
+![Image of typings](https://i.imgur.com/umobort.png)
+
 ## Requirements
 - A terminal with support for xterm-256 colors
 - [Termbox](https://github.com/nsf/termbox) installed
@@ -26,6 +28,7 @@ All controls are also displayed in the footer at the bottom of the application w
 - [ ] Better user input (Full Unicode support)
 - [ ] Remove need for extra space once finished typing
 - [ ] Testing on other OS's, so far only WSL2 tested
+- [ ] Remove possiblity of repeated words back-to-back
 
 ## Additional Notes
 - Currently WSL1 is incompatable with Termbox. If you want to use this program through WSL, please upgrade to WSL2. (It's better anyway)
