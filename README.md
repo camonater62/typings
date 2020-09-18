@@ -1,6 +1,6 @@
 # TYPINGS
 
-A terminal/cli typing test heavily inspired/based off @briano1905 's [typings.gg](https://typings.gg) | [github page](https://github.com/briano1905/typings).
+A terminal/cli typing test heavily inspired/based off [@briano1905](https://github.com/briano1905)'s [typings.gg](https://typings.gg).
 
 ![Image of typings](https://i.imgur.com/umobort.png)
 
