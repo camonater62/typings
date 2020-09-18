@@ -6,7 +6,7 @@ A terminal/cli typing test heavily inspired/based off [@briano1905](https://gith
 
 ## Requirements
 - A terminal with support for xterm-256 colors
-- [Termbox](https://github.com/nsf/termbox) installed
+- [Termbox](https://github.com/nsf/termbox)
 - A keyboard
 
 ## Usage
@@ -29,8 +29,9 @@ All controls are also displayed in the footer at the bottom of the application w
 - [ ] Remove need for extra space once finished typing
 - [ ] Testing on other OS's, so far only WSL2 tested
 - [x] Remove possiblity of repeated words back-to-back
-- [ ] More / Better themes
+- [ ] Improved themes (better compatibility with xterm256 colors)
 - [ ] Explore possibility for 24bit colors
+- [ ] Mouse input
 
 ## Additional Notes
 - Currently WSL1 is incompatable with Termbox. If you want to use this program through WSL, please upgrade to WSL2. (It's better anyway)
