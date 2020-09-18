@@ -177,7 +177,12 @@ void reset() {
     words.clear();
     user_input = "";
     for(int i = 0; i < length_options[current_length % length_options.size()]; i++) {
-        words.push_back(DICTIONARY[rand() % DICTIONARY.size()]);
+        string w = "";
+        do {
+            // Ensure current word is not the same as the previous word
+            w = DICTIONARY[rand() % DICTIONARY.size()];
+        } while(i != 0 && w == words.back());
+        words.push_back(w);
     }
 }
 
@@ -276,15 +281,12 @@ int main() {
                             break;
 
                         default:
-                        	if(e.ch >= L'!' && e.ch <= L'~') { 
-                                // Range of displayable characters
-	                            if(!started) {
-	                                started = true; 
-	                                start_time = system_clock::now();
-	                            }
-	                            if(current_word < (int)words.size()) {
-	                                user_input += e.ch;
-	                            }
+                            if(!started) {
+                                started = true; 
+                                start_time = system_clock::now();
+                            }
+                            if(current_word < (int)words.size()) {
+                                user_input += e.ch;
                             }
                                                   
                     }

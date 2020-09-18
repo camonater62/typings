@@ -25,10 +25,10 @@ All controls are also displayed in the footer at the bottom of the application w
 - Much more can be easily changed through modifications in `typings.cpp`.
 
 ## TODO
-- [ ] Better user input (Full Unicode support)
+- [x] Better user input (Full Character support)
 - [ ] Remove need for extra space once finished typing
 - [ ] Testing on other OS's, so far only WSL2 tested
-- [ ] Remove possiblity of repeated words back-to-back
+- [x] Remove possiblity of repeated words back-to-back
 - [ ] More / Better themes
 - [ ] Explore possibility for 24bit colors
 
