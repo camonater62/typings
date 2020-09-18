@@ -1,2 +1,11 @@
+CXX = g++
+CXXFLAGS = -O2
+LIBS = -ltermbox
+
+default: typings
+
 typings: typings.cpp 
-	g++ typings.cpp -ltermbox -o typings -O2
+	$(CXX) $(CXXFLAGS) typings.cpp -o typings $(LIBS)
+
+clean:
+	$(RM) typings
