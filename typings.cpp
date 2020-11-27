@@ -281,12 +281,15 @@ int main() {
                             break;
 
                         default:
-                            if(!started) {
-                                started = true; 
-                                start_time = system_clock::now();
-                            }
-                            if(current_word < (int)words.size()) {
-                                user_input += e.ch;
+                            if(e.ch >= L'!' && e.ch <= L'~') { 
+                                // Range of displayable characters
+	                            if(!started) {
+	                                started = true; 
+	                                start_time = system_clock::now();
+	                            }
+	                            if(current_word < (int)words.size()) {
+	                                user_input += e.ch;
+	                            }
                             }
                                                   
                     }

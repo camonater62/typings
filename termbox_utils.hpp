@@ -12,6 +12,7 @@
  * Draws a string to the screen.
  * @param x starting x position
  * @param y y position
+ * @param text string to write
  * @param fg foreground color 
  * @param bg background color
  */
@@ -136,7 +137,7 @@ std::vector<int> lookup = {
  * @returns red value
  */
 int getR(int hex) {
-    return (hex & 0xFF0000) >> 16;
+    return hex >> 16;
 }
 
 /**
@@ -146,7 +147,7 @@ int getR(int hex) {
  * @returns green value
  */
 int getG(int hex) {
-    return (hex & 0x00FF00) >> 8;
+    return (hex >> 8) & 0x00FF;
 }
 
 /**
@@ -156,7 +157,7 @@ int getG(int hex) {
  * @returns blue value
  */
 int getB(int hex) {
-    return (hex & 0x0000FF) >> 0;
+    return (hex & 0x0000FF);
 }
 
 /**
@@ -172,9 +173,9 @@ uint16_t RGB(int r, int g, int b) {
     int bestdist = UINT16_MAX;
     int index = -1;
     for(int i = lookup.size() - 1; i >= 0; i--) {
-        int dist = sqrtf( powf(r - getR(lookup[i]), 2)
-                        + powf(g - getG(lookup[i]), 2)
-                        + powf(b - getB(lookup[i]), 2) );
+        int dist = (r - getR(lookup[i])) * (r - getR(lookup[i]))
+                 + (g - getG(lookup[i])) * (g - getG(lookup[i]))
+                 + (b - getB(lookup[i])) * (b - getB(lookup[i]));
         if(dist < bestdist) {
             bestdist = dist;
             index = i;
