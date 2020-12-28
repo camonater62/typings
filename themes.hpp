@@ -74,6 +74,16 @@ std::vector<ColorTheme> THEMES = {
         .typing_area = HEX(0xd9d2c8),
         .input_box = HEX(0xb6b09a)
     },
+     {
+        .name = "blue",
+        .background = HEX(0x0000FF),
+        .text = HEX(0x0000FF),
+        .highlight = HEX(0x0000FF),
+        .correct = HEX(0x0000FF),
+        .wrong = HEX(0x0000FF),
+        .typing_area = HEX(0x0000FF),
+        .input_box = HEX(0x0000FF)
+    }
 
     // Add more themes here!
 
