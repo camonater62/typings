@@ -25,11 +25,12 @@ All controls are also displayed in the footer at the bottom of the application w
 ## TODO
 - [ ] Better user input
 - [ ] Remove need for extra space once finished typing
-- [ ] Testing on other OS's, so far only WSL2 tested
+- [X] Testing on other OS's, so far only WSL2 tested
 - [x] Remove possiblity of repeated words back-to-back
 - [ ] Improved themes (better compatibility with xterm256 colors)
 - [ ] Explore possibility for 24bit colors
 - [ ] Mouse input
+- [ ] Better accuracy measure
 
 ## Additional Notes
 - Currently WSL1 is incompatable with Termbox. If you want to use this program through WSL, please upgrade to WSL2. (It's better anyway)

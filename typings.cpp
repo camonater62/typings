@@ -210,16 +210,20 @@ int main() {
 
             double time = duration_cast<milliseconds>(end_time - start_time).count() / 1000.0;
 
-            int chars = words.size(); // Account for spaces
+            int total_chars = words.size(); // Account for spaces
+	    int wrong_chars = 0;
 
             for(int i = 0; i < (int)words.size(); i++) {
+                total_chars += words[i].length();
                 if(!is_wrong(i)) {
-                    chars += words[i].length();
-                }
+                //    chars += words[i].length();
+                } else {
+		    wrong_chars += words[i].length();
+		}
             }
 
-            wpm = 60 * chars / time / 5;
-            acc = 100 - 100 * wrong_words.size() / words.size();
+            wpm = 60 * (total_chars - wrong_chars) / time / 5;
+            acc = 100 - 100 * wrong_chars / total_chars;
         }
 
         tb_clear();
